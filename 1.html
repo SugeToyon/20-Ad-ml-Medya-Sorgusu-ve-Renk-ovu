@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20 Adımlı Medya Sorgusu ve Renk Şovu</title>
+    <style>
+        /* --- 20 ADIMLI MEDYA SORGUSU VE RENK SPEKTRUMU --- */
+        
+        /* Adım 20: Ultra Geniş (> 1800px) */
+        :root {
+            --bg: #030712;
+            --card: #0f172a;
+            --accent: #38bdf8;
+            --step-text: "20 / ULTRA GENİŞ";
+        }
+
+        /* Adım 19 (≤ 1800px) */
+        @media (max-width: 1800px) { :root { --bg: #05051a; --card: #0f0f2b; --accent: #6366f1; --step-text: "19 / SEVİYE 19"; } }
+        
+        /* Adım 18 (≤ 1700px) */
+        @media (max-width: 1700px) { :root { --bg: #09031b; --card: #180c30; --accent: #8b5cf6; --step-text: "18 / SEVİYE 18"; } }
+        
+        /* Adım 17 (≤ 1600px) */
+        @media (max-width: 1600px) { :root { --bg: #12021b; --card: #280a38; --accent: #a855f7; --step-text: "17 / SEVİYE 17"; } }
+        
+        /* Adım 16 (≤ 1500px) */
+        @media (max-width: 1500px) { :root { --bg: #1a0216; --card: #360a30; --accent: #d946ef; --step-text: "16 / SEVİYE 16"; } }
+        
+        /* Adım 15 (≤ 1400px) */
+        @media (max-width: 1400px) { :root { --bg: #1f020a; --card: #3d0819; --accent: #ec4899; --step-text: "15 / SEVİYE 15"; } }
+        
+        /* Adım 14 (≤ 1300px) */
+        @media (max-width: 1300px) { :root { --bg: #1f0502; --card: #3d120a; --accent: #f43f5e; --step-text: "14 / SEVİYE 14"; } }
+        
+        /* Adım 13 (≤ 1200px) */
+        @media (max-width: 1200px) { :root { --bg: #1f0f02; --card: #3d220a; --accent: #f97316; --step-text: "13 / SEVİYE 13"; } }
+        
+        /* Adım 12 (≤ 1100px) */
+        @media (max-width: 1100px) { :root { --bg: #1f1b02; --card: #3d350a; --accent: #eab308; --step-text: "12 / SEVİYE 12"; } }
+        
+        /* Adım 11 (≤ 1000px) */
+        @media (max-width: 1000px) { :root { --bg: #181f02; --card: #2f3d0a; --accent: #84cc16; --step-text: "11 / LAPTOP"; } }
+        
+        /* Adım 10 (≤ 900px) */
+        @media (max-width: 900px) {  :root { --bg: #0b1f02; --card: #163d0a; --accent: #22c55e; --step-text: "10 / TABLET"; } }
+        
+        /* Adım 9 (≤ 800px) */
+        @media (max-width: 800px) {  :root { --bg: #021f0b; --card: #0a3d1b; --accent: #10b981; --step-text: "09 / SEVİYE 9"; } }
+        
+        /* Adım 8 (≤ 700px) */
+        @media (max-width: 700px) {  :root { --bg: #021f18; --card: #0a3d31; --accent: #14b8a6; --step-text: "08 / SEVİYE 8"; } }
+        
+        /* Adım 7 (≤ 600px) */
+        @media (max-width: 600px) {  :root { --bg: #021c1f; --card: #0a383d; --accent: #06b6d4; --step-text: "07 / SEVİYE 7"; } }
+        
+        /* Adım 6 (≤ 500px) */
+        @media (max-width: 500px) {  :root { --bg: #02131f; --card: #0a273d; --accent: #0ea5e9; --step-text: "06 / MOBİL"; } }
+        
+        /* Adım 5 (≤ 440px) */
+        @media (max-width: 440px) {  :root { --bg: #020b1f; --card: #0a173d; --accent: #3b82f6; --step-text: "05 / SEVİYE 5"; } }
+        
+        /* Adım 4 (≤ 380px) */
+        @media (max-width: 380px) {  :root { --bg: #07021f; --card: #120a3d; --accent: #4f46e5; --step-text: "04 / SEVİYE 4"; } }
+        
+        /* Adım 3 (≤ 320px) */
+        @media (max-width: 320px) {  :root { --bg: #13021f; --card: #230a3d; --accent: #7c3aed; --step-text: "03 / DAR"; } }
+        
+        /* Adım 2 (≤ 280px) */
+        @media (max-width: 280px) {  :root { --bg: #1f0219; --card: #3d0a33; --accent: #a21caf; --step-text: "02 / MİNİK"; } }
+        
+        /* Adım 1 (≤ 240px) */
+        @media (max-width: 240px) {  :root { --bg: #1f0202; --card: #3d0a0a; --accent: #e11d48; --step-text: "01 / KRİTİK"; } }
+
+        /* --- GENEL STİL VE GEÇİŞ (TRANSITION) --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #f8fafc;
+            font-family: system-ui, -apple-system, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            /* Yağ gibi akan geçiş sihri */
+            transition: background-color 0.4s ease-in-out;
+        }
+
+        .show-box {
+            background-color: var(--card);
+            border: 2px solid var(--accent);
+            padding: 35px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            width: 100%;
+            max-width: 380px;
+            /* Kart renkleri de kusursuz senkronize akıyor */
+            transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+        }
+
+        .stage-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--accent);
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            transition: color 0.4s ease-in-out;
+        }
+
+        /* Yazıları tamamen CSS değişkeniyle (medya sorgularıyla) yönetiyoruz */
+        .stage-title::after {
+            content: var(--step-text);
+        }
+
+        .sub-text {
+            font-size: 0.75rem;
+            opacity: 0.6;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="show-box">
+        <div class="stage-title"></div>
+        <div class="sub-text">Akış Sensörü</div>
+    </div>
+
+</body>
+</html>
