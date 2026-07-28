@@ -1,0 +1,1 @@
+# 20-Ad-ml-Medya-Sorgusu-ve-Renk-ovu
