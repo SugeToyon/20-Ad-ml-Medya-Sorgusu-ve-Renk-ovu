@@ -15,7 +15,7 @@ Ekran boyutuna bağlı olarak arka planı, kart renklerini ve dinamik metinleri 
 ## Kullanım
 
 1. Projeyi bilgisayarınıza klonlayın veya indirin.
-2. index.html dosyasını herhangi bir web tarayıcısında açın.
+2. 1.html dosyasını herhangi bir web tarayıcısında açın.
 3. Tarayıcı pencerenizin boyutunu küçültüp büyülterek 20 farklı renk ve seviye değişimini canlı olarak gözlemleyin.
 
 ## Lisans
